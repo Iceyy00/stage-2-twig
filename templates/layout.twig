@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>DomTicket - {% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="/?p=landing">DomTicket</a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="/?p=dashboard" class="nav-link">Dashboard</a>
+          <a href="/?p=tickets" class="nav-link">Tickets</a>
+        </nav>
+        <div class="auth-actions">
+          <button id="logoutBtn" class="btn btn-ghost" hidden>Logout</button>
+          <a href="/?p=auth/login" class="btn">Login</a>
+          <a href="/?p=auth/signup" class="btn btn-primary">Get Started</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© DomTicket — Example app. Accessible and responsive demo.</p>
+      </div>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="/assets/js/app.js" defer></script>
+</body>
+</html>

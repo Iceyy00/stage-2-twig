@@ -1,0 +1,40 @@
+{% extends 'layout.twig' %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+  <section class="hero">
+    <div class="hero-inner">
+      <h1 class="hero-title">DomTicket</h1>
+      <p class="hero-sub">Lightweight ticket management with an emphasis on design, accessibility, and a pleasant developer experience.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="/?p=auth/login">Login</a>
+        <a class="btn" href="/?p=auth/signup">Get Started</a>
+      </div>
+    </div>
+    <!-- decorative circle -->
+    <div class="circle circle-hero" aria-hidden="true"></div>
+    <!-- wavy bottom -->
+    <svg class="hero-wave" viewBox="0 0 1440 100" preserveAspectRatio="none" role="img" aria-hidden="true">
+      <path d="M0,20 C360,80 1080,0 1440,40 L1440,100 L0,100 Z" fill="#f8fafc"></path>
+    </svg>
+  </section>
+
+  <section class="features">
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Fast setup</h3>
+        <p>Run locally with PHP and composer; authentication simulated with localStorage.</p>
+      </div>
+      <div class="card">
+        <h3>Responsive UI</h3>
+        <p>Max width 1440px, accessible markup, and mobile-first layout.</p>
+      </div>
+      <div class="card">
+        <h3>All CRUD</h3>
+        <p>Create, view, edit and delete tickets. Real-time validation and status colors.</p>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'layout.twig' %}
+
+{% block title %}Sign up{% endblock %}
+
+{% block content %}
+  <section class="auth-card card">
+    <h2>Create an account</h2>
+    <form id="signupForm" novalidate>
+      <label for="signup-username">Email or Username</label>
+      <input id="signup-username" name="username" type="text" required>
+      <div class="field-error" data-for="username"></div>
+
+      <label for="signup-password">Password</label>
+      <input id="signup-password" name="password" type="password" required minlength="6">
+      <div class="field-error" data-for="password"></div>
+
+      <div class="form-actions">
+        <button class="btn btn-primary" type="submit">Sign up</button>
+        <a href="/?p=auth/login" class="btn btn-ghost">Login</a>
+      </div>
+    </form>
+  </section>
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'layout.twig' %}
+
+{% block title %}Tickets{% endblock %}
+
+{% block content %}
+  <section class="tickets">
+    <div class="tickets-header">
+      <h2>Tickets</h2>
+      <button id="newTicketBtn" class="btn btn-primary">New Ticket</button>
+    </div>
+
+    <div id="ticketFormContainer" class="card" hidden>
+      <h3 id="ticketFormTitle">Create Ticket</h3>
+      <form id="ticketForm" novalidate>
+        <label for="title">Title <span class="required">*</span></label>
+        <input id="title" name="title" type="text" required>
+        <div class="field-error" data-for="title"></div>
+
+        <label for="description">Description</label>
+        <textarea id="description" name="description"></textarea>
+        <div class="field-error" data-for="description"></div>
+
+        <label for="status">Status <span class="required">*</span></label>
+        <select id="status" name="status" required>
+          <option value="">-- select --</option>
+          <option value="open">Open</option>
+          <option value="in_progress">In Progress</option>
+          <option value="closed">Closed</option>
+        </select>
+        <div class="field-error" data-for="status"></div>
+
+        <label for="priority">Priority</label>
+        <select id="priority" name="priority">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="button" id="cancelTicket" class="btn btn-ghost">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="ticketsList" class="grid grid-3">
+      <!-- ticket cards rendered here -->
+    </div>
+  </section>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'layout.twig' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+  <section class="dashboard">
+    <h2>Dashboard</h2>
+    <div class="grid grid-3 stats">
+      <div class="card stat">
+        <h3 id="totalTickets">0</h3>
+        <p>Total tickets</p>
+      </div>
+      <div class="card stat">
+        <h3 id="openTickets">0</h3>
+        <p>Open tickets</p>
+      </div>
+      <div class="card stat">
+        <h3 id="resolvedTickets">0</h3>
+        <p>Resolved / Closed</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Quick actions</h3>
+      <p>Use the navigation to manage tickets or create a new one.</p>
+      <div class="form-actions">
+        <a href="/?p=tickets" class="btn btn-primary">Manage Tickets</a>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
